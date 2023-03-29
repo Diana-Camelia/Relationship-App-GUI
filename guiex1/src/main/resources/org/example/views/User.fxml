@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.UserController">
+   <children>
+      <Text fill="#2596be" layoutX="264.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My PROFILE" textAlignment="CENTER" wrappingWidth="287.73681640625">
+         <font>
+            <Font name="Elephant" size="36.0" />
+         </font>
+      </Text>
+      <Group layoutX="45.0" layoutY="72.0">
+         <children>
+            <TableView fx:id="usersTab" layoutX="-15.0" layoutY="21.0" prefHeight="215.0" prefWidth="140.0" style="-fx-border-color: #2596BE;">
+               <columns>
+                  <TableColumn fx:id="colUsername" prefWidth="157.33334350585938" text="Username:" />
+               </columns>
+            </TableView>
+         </children>
+      </Group>
+      <Group fx:id="FriendsGroup" layoutX="232.0" layoutY="106.0" />
+      <Group fx:id="RequestGroup" layoutX="417.0" layoutY="91.0" />
+      <TableView fx:id="requestTab" layoutX="425.0" layoutY="93.0" prefHeight="215.0" prefWidth="140.0" style="-fx-border-color: #2596BE;">
+         <columns>
+            <TableColumn fx:id="colRequests" prefWidth="142.40008544921875" text="Requests:" />
+         </columns>
+      </TableView>
+      <Button fx:id="declineRequest" layoutX="505.0" layoutY="310.0" mnemonicParsing="false" onAction="#declineRequest" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #2596BE;" text="Delete" textFill="WHITE" />
+      <Button fx:id="acceptRequest" layoutX="425.0" layoutY="310.0" mnemonicParsing="false" onAction="#acceptRequest" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #2596BE;" text="Accept" textFill="WHITE" />
+      <TableView fx:id="friendsTab" layoutX="229.0" layoutY="92.0" prefHeight="215.0" prefWidth="141.0" style="-fx-border-color: #2596BE;">
+         <columns>
+            <TableColumn fx:id="colFriends" prefWidth="151.9999745686849" text="Friends:" />
+         </columns>
+      </TableView>
+      <TextField fx:id="handleFiltre" layoutX="82.0" layoutY="28.0" prefHeight="7.0" prefWidth="139.0" promptText="Search for friends" />
+      <Button fx:id="deleteFriend" layoutX="264.0" layoutY="310.0" mnemonicParsing="false" onAction="#deleteFriend" prefHeight="23.0" prefWidth="72.0" style="-fx-background-color: #2596BE;" text="Delete" textFill="WHITE" />
+      <Button fx:id="sendRequest" alignment="CENTER" layoutX="63.0" layoutY="310.0" mnemonicParsing="false" onAction="#sendRequest" style="-fx-background-color: #2596BE;" text="Add friend" textAlignment="CENTER" textFill="WHITE" />
+   </children>
+</AnchorPane>
